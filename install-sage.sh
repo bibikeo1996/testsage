@@ -1,6 +1,10 @@
 #!/bin/bash
 
+# Xử lý Ctrl+C để thoát script an toàn
+trap 'echo -e "\n\n❌ Script bị dừng bởi người dùng (Ctrl+C)"; exit 1' INT
+
 echo "=== Cài đặt Sage Theme (Thông minh) ==="
+echo "💡 Nhấn Ctrl+C để thoát bất cứ lúc nào"
 
 # Kiểm tra xem Sage theme đã tồn tại chưa
 if [ -d "wordpress/wp-content/themes/sage" ]; then
