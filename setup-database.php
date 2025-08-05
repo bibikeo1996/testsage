@@ -311,9 +311,4 @@ foreach ($allMatches as $match) {
 }
 
 echo "\n=== Database Setup Complete ===\n";
-echo "Live matches: " . count($liveMatches) . "\n";
-echo "Finished matches: " . count($finishedMatches) . "\n";
-echo "Upcoming matches: " . count($upcomingMatches) . "\n";
-echo "Total matches: " . count($allMatches) . "\n";
-echo "You can now access the sports website at: http://localhost:8000\n";
 ?> 
