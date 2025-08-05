@@ -1,0 +1,73 @@
+# WordPress Core
+wordpress/wp-config.php
+wordpress/wp-content/uploads/
+wordpress/wp-content/cache/
+wordpress/wp-content/backup-db/
+wordpress/wp-content/backups/
+wordpress/wp-content/blogs.dir/
+wordpress/wp-content/upgrade/
+wordpress/wp-content/uploads/
+wordpress/wp-content/plugins/hello.php
+
+# Sage Theme
+wordpress/wp-content/themes/sage/node_modules/
+wordpress/wp-content/themes/sage/public/build/
+wordpress/wp-content/themes/sage/public/mix-manifest.json
+wordpress/wp-content/themes/sage/public/hot
+wordpress/wp-content/themes/sage/storage/
+wordpress/wp-content/themes/sage/.env
+wordpress/wp-content/themes/sage/.env.*
+wordpress/wp-content/themes/sage/vendor/
+
+# Composer
+vendor/
+composer.lock
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Docker
+.dockerignore
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Database
+*.sql
+*.sqlite
+
+# Backup files
+*.bak
+*.backup 
