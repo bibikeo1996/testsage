@@ -15,9 +15,19 @@ open -a Docker
 
 # Khởi động containers
 docker-compose up -d
+
+# Dừng tất cả containers
+docker-compose down
+
+# Xóa containers cũ
+docker system prune
+
+Trường hợp `phpMyAdmin tried to connect to the MySQL server, and the server rejected the connection.` thì đổi port line 15 docker composer
+`ports:
+   - "3307:3306"`
 ```
 
-### Bước 2: Cài đặt Sage Theme (nếu chưa có)
+### Bước 2: Cài đặt Sage Theme
 ```bash
 ./install-sage.sh
 ```

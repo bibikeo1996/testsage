@@ -10,4 +10,3 @@ echo "Building assets..."
 docker run --rm -v "$(pwd):/app" -w /app node:18 npm run build
 
 echo "=== Hoàn thành build assets ==="
-echo "Bây giờ bạn có thể truy cập WordPress: http://localhost:8000" 
