@@ -39,3 +39,9 @@ else
     echo "=== Hoàn thành cài đặt Sage Theme ==="
     echo "Truy cập WordPress admin để kích hoạt theme: /wp-admin"
 fi
+
+# Giữ terminal mở sau khi hoàn thành
+echo ""
+echo "🎉 Script đã hoàn thành!"
+echo "💡 Nhấn Enter để đóng terminal..."
+read -p ""
