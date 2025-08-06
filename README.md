@@ -1,7 +1,3 @@
-# WordPress Sports Website với Sage Theme
-
-Dự án WordPress sử dụng Sage theme để hiển thị dữ liệu thể thao.
-
 ## Yêu cầu hệ thống
 - Docker Desktop
 - Docker Compose
