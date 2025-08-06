@@ -30,8 +30,8 @@ docker-compose ps
 ### 3. Thiết lập Database
 ```bash
 # Copy và chạy script tạo database
-docker cp setup-database.php sportproject-sage-sport-cms-1:/var/www/html/setup-database.php
-docker exec sportproject-sage-sport-cms-1 php /var/www/html/setup-database.php
+docker cp setup-database.php wordpress_wordpress_1:/var/www/html/setup-database.php
+docker exec wordpress_wordpress_1 php /var/www/html/setup-database.php
 ```
 
 ### 4. Build Assets
@@ -59,8 +59,8 @@ docker-compose down
 docker-compose down -v
 
 # Xem logs
-docker-compose logs sage-sport-cms
-docker-compose logs sage-db
+docker-compose logs wordpress
+docker-compose logs db
 
 # Rebuild containers
 docker-compose up -d --build
@@ -72,19 +72,19 @@ docker-compose up -d --build
 ./build-assets.sh
 
 # Watch mode (development)
-docker run --rm -v "$(pwd)/sage-sport:/var/www/html" -w /var/www/html/wp-content/themes/sage node:18 npm run dev
+docker run --rm -v "$(pwd)/wordpress:/var/www/html" -w /var/www/html/wp-content/themes/sage node:18 npm run dev
 ```
 
 ### Database Commands
 ```bash
 # Vào MySQL container
-docker-compose exec sage-db mysql -u wordpress -p wordpress
+docker-compose exec db mysql -u wordpress -p wordpress
 
 # Backup database
-docker-compose exec sage-db mysqldump -u wordpress -p wordpress > backup.sql
+docker-compose exec db mysqldump -u wordpress -p wordpress > backup.sql
 
 # Restore database
-docker-compose exec -T sage-db mysql -u wordpress -p wordpress < backup.sql
+docker-compose exec -T db mysql -u wordpress -p wordpress < backup.sql
 ```
 
 ## Troubleshooting
@@ -112,7 +112,7 @@ docker-compose restart
 ```
 
 ## Cấu trúc dự án
-- `sage-sport/` - Thư mục WordPress
+- `wordpress/` - Thư mục WordPress
 - `docker-compose.yml` - Cấu hình Docker
 - `install-sage.sh` - Script cài đặt Sage theme
 - `build-assets.sh` - Script build assets

@@ -3,7 +3,7 @@
 echo "=== Build Sage Assets ==="
 
 # Vào thư mục Sage theme
-cd wordpress/wp-content/themes/sage
+cd sage-sport/wp-content/themes/sage
 
 # Build assets
 echo "Building assets..."

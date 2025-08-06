@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   # MySQL Database
-  db:
+  sage-db:
     image: mysql:8.0
     restart: always
     environment:
@@ -16,29 +16,29 @@ services:
       - "3306:3306"
 
   # WordPress
-  wordpress: # Project name
+  sage-sport-cms: # Project name
     depends_on:
-      - db
+      - sage-db
     image: wordpress:latest
     restart: always
     environment:
-      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_HOST: sage-db:3306
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
     volumes:
-      - ./wordpress:/var/www/html
+      - ./sage-sport:/var/www/html
     ports:
       - "8000:80"
 
   # phpMyAdmin
-  phpmyadmin:
+  sage-phpmyadmin:
     depends_on:
-      - db
+      - sage-db
     image: phpmyadmin/phpmyadmin
     restart: always
     environment:
-      PMA_HOST: db
+      PMA_HOST: sage-db
       PMA_PORT: 3306
       PMA_USER: wordpress
       PMA_PASSWORD: wordpress
