@@ -153,3 +153,18 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer',
     ] + $config);
 });
+
+/**
+ * Enqueue sports-matches CSS.
+ *
+ * @return void
+ */
+add_action('wp_enqueue_scripts', function () {
+    // Enqueue sports-matches CSS
+    wp_enqueue_style(
+        'sage-sports-matches',
+        Vite::asset('resources/css/sports-matches.css'),
+        [],
+        null
+    );
+});

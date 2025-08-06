@@ -10,6 +10,7 @@ export default defineConfig({
     laravel({
       input: [
         'resources/css/app.css',
+        'resources/css/sports-matches.css',
         'resources/js/app.js',
         'resources/css/editor.css',
         'resources/js/editor.js',

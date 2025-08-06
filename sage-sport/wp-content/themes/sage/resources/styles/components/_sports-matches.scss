@@ -278,6 +278,7 @@
     grid-template-columns: 20px 60px 1fr 50px 50px !important;
     gap: 3px !important;
     padding: 8px !important;
+    overflow-x:auto;
 
     .match-teams {
       .team {

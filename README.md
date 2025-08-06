@@ -105,6 +105,16 @@ lsof -i :3306
 
 # Lỗi phpMyAdmin connection
 docker-compose restart
+
+# Lỗi docker: Error response from daemon: the working directory 'C:/Program Files/Git/var/www/html/wp-content/themes/sage' is invalid, it needs to be an absolute path 
+# Lỗi này khi chạy ./install-sage.sh
+
+cd sage-sport/wp-content/themes/sage => composer install
+
+cd sage-sport/wp-content/themes/sage => npm install 
+
+cd sage-sport/wp-content/themes/sage => npm run build
+
 ```
 
 ## Cấu trúc dự án
