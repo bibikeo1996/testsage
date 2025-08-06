@@ -24,13 +24,13 @@
         <?php echo $__env->yieldContent('content'); ?>
       </main>
 
-      <?php if (! empty(trim($__env->yieldContent('sidebar')))): ?>
+      <!-- <?php if (! empty(trim($__env->yieldContent('sidebar')))): ?>
         <aside class="sidebar">
           <?php echo $__env->yieldContent('sidebar'); ?>
         </aside>
-      <?php endif; ?>
+      <?php endif; ?> -->
 
-      <?php echo $__env->make('sections.footer', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+      <!-- <?php echo $__env->make('sections.footer', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> -->
     </div>
 
     <?php (do_action('get_footer')); ?>
